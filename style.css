@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+
+    width: 100%;
+}
+
+
+#main #page1 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.effect,
+.effect2 {
+    height: 110vh;
+    width: 50%;
+    background: rgb(11, 51, 255, 0.9999);
+    background: radial-gradient(circle, raba(11, 51, 255.0.9222) 25%, rgba(0, 0, 0, 0, 9) 93%);
+    box-shadow: 0 0 10rem cyan;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    filter: blur(70px);
+    position: absolute;
+    top: -20vh;
+    left: 40%;
+    z-index: 9;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    animation: rotate 10s linear infinite alternate-reverse;
+}
+
+.effect2 {
+    height: 50vh;
+    width: 30%;
+    filter: blur(35px);
+    position: absolute;
+    top: 0;
+    left: -5%;
+}
+
+.effect::after,
+.effect::before {
+    content: '';
+    display: block;
+    border-radius: 50%;
+}
+
+.effect::after {
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(ellipse at center, cyan 0%, cyan 25%, white 25%, white 100%);
+    animation-delay: 1.5s;
+    filter: blur(0px);
+    transition: all ease 0.6s;
+    transform: rotate(90deg);
+}
+
+.effect2::after {
+    filter: blur(15px);
+    transition: all ease 0.6s;
+    animation: inner-size 10s infinite;
+    background: radial-gradient(ellipse at center, cyan 0%, cyan 25%, white 25%, white 100%);
+    height: 50%;
+    width: 50%;
+}
+
+.effect2::before {
+    width: 25%;
+    height: 50%;
+    background: radial-gradient(ellipse at center, red 0%, red 50%, pink 5%, pink 50%);
+    top: 40%;
+    filter: blur(10px);
+
+}
+
+.effect::before {
+    transition: all ease 0.6s;
+    width: 25%;
+    height: 40%;
+    background: radial-gradient(ellipse at center, red 0%, red 50%, pink 5%, pink 50%);
+    top: 40%;
+}
+
+@keyframes inner-size {
+
+    0%,
+    40% {
+        width: 50%;
+        height: 50%;
+        background: radial-gradient(ellipse at center, cyan 0%, cyan 25%, white 15%, white 100%);
+
+    }
+
+    60%,
+    70%,
+    90% {
+        width: 40%;
+        height: 40%;
+
+    }
+
+    100% {
+        transform: skew(0deg, 10deg);
+        height: 25%;
+        width: 25%;
+        background: radial-gradient(ellipse at center, cyan 0%, cyan 25%, white 15%, white 100%);
+
+
+    }
+
+    40%,
+    50% {
+        height: 30%;
+        width: 30%;
+        transform: skew(-10deg);
+    }
+
+}
+
+@keyframes rotate {
+    to {
+
+        transform: rotate(140deg) skew(20deg, -20deg);
+    }
+
+}
+
+
+@keyframes siz-zex {
+    10% {
+        transform: skew(10deg, -20deg);
+    }
+
+    30% {
+        transform: skew(-10deg, 20deg)scale(1.1);
+    }
+
+    70% {
+        transform: skew(-10deg, 20deg) translate(10%, -20%) scale(1.1);
+    }
+
+    80% {
+        transform: skew(-5deg, -10deg)scale(.8);
+    }
+
+    100% {
+        transform: translate(0%, 0%) scale(1);
+    }
+
+
+}
+
+#inline::-webkit-scrollbar {
+    display: none;
+}
+
+#box1 h1 {
+    position: relative;
+}
+
+#heading:hover::after {
+    background-color: #666;
+}
+
+#heading::after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    height: 1%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+#imgs {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/11/photo_2023-11-11-18.27.06.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+#imgbox {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/laboratory.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#imgbox2 {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/ship.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#page9 {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/1.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+#img1 {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/2-1-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img2 {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/1-1-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img3 {
+
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/5-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img4 {
+
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/4-1-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img5 {
+
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/3-1-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img6 {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/Desktop-36-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img7 {
+
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/Desktop-39-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img8 {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/Desktop-38-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+#img9 {
+    background-image: url("https://encontech.nl/wp-content/uploads/2023/10/Desktop-37-300x244.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
